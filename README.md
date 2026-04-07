@@ -1,0 +1,1 @@
+Site à vocation pédagogique pour illustrer le Responsive Web Design
