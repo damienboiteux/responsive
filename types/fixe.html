@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site à vocation pédagogique pour illustrer le Responsive Web Design : design fixe">
+    <title>Layout fixe</title>
+    <style>
+        body {
+            margin: 0;
+            color: #fff;
+
+        }
+        header, footer {
+            height: 100px;
+            background-color: #3498db;
+            text-align: center;
+            line-height: 100px;
+        }
+        .pub {
+            height: 50px;
+            background-color: #e74c3c;
+            text-align: center;
+            line-height: 50px;
+        }
+        main {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            height: 300px;
+            background-color: #2ecc71;
+            text-align: center;
+            line-height: 300px;
+        }
+        .content {
+            width: 560px;
+            height: 300px;
+            background-color: #a81cb4;
+            text-align: center;
+            line-height: 300px;
+        }
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>HEADER</header>
+        <div class="pub">PUBLICITÉ</div>
+        <main>
+            <div class="sidebar">GAUCHE</div>
+            <div class="content">
+                LAYOUT FIXE
+            </div>
+            <div class="sidebar">DROITE</div>
+        </main>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+</html>
