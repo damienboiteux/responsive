@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Site à vocation pédagogique pour illustrer le Responsive Web Design : design fixe">
-    <title>Layout adaptatif</title>
+    <title>Layout fixe</title>
     <style>
         body {
             margin: 0;
             color: #fff;
-            
         }
 
         .container {
             width: 960px;
             margin: 0 auto;
-        }
-        
-        main {
             display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header, footer {
@@ -27,64 +25,38 @@
             text-align: center;
             line-height: 100px;
         }
-        .pub {
-            height: 50px;
-            background-color: #e74c3c;
-            text-align: center;
-            line-height: 50px;
+        
+        main {
+            flex-grow: 1;
+            display: flex;
         }
         .sidebar {
-            width: 200px;
+            /* width: 200px; */
+            flex-grow: 1;
+            flex-basis: 20%;
             height: 300px;
             background-color: #2ecc71;
             text-align: center;
             line-height: 300px;
         }
         .content {
-            width: 560px;
+            /* width: 560px; */
+            flex-basis: 60%;
             height: 300px;
+            /* min-height: calc(100vh - 200px); */
             background-color: #a81cb4;
             text-align: center;
             line-height: 300px;
-        }
-
-        /* Version tablette */
-        @media (max-width: 768px) {
-        /* @media (max-width: 960px) { */
-            .container {
-                width: 700px;
-            }
-            .sidebar {
-                width: 150px;
-            }
-            .content {
-                width: 400px;
-            }
-        }
-
-        /* Version mobile */
-        @media (max-width: 480px) {
-        /* @media (max-width: 768px) { */
-            /* .container {
-                width: 100%;
-            } */
-            main {
-                display: block;
-            }
-            .sidebar, .content {
-                width: 100%;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>HEADER</header>
-        <div class="pub">PUBLICITÉ</div>
         <main>
             <div class="sidebar">GAUCHE</div>
             <div class="content">
-                LAYOUT ADAPTATIF
+                LAYOUT FIXE
             </div>
             <div class="sidebar">DROITE</div>
         </main>
